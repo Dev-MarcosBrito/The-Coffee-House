@@ -4,76 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="The Coffee House - O melhor café para programadores e amantes de código da região">
+    <meta name="keywords" content="café, programação, code, coffee, cafeteria">
+    <meta name="author" content="The Coffee House">
+    <link rel="stylesheet" href="assets/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>The Coffee House ☕</title>
+    <title>The Coffee House ☕ | Café para Programadores</title>
 </head>
 
 <body>
-    <div class="caixa-video">
-        <video src="./videos/video.mp4" loop muted autoplay></video>
-        <div class="mascara"></div>
+    <div class="background-video">
+        <video src="./assets/videos/video.mp4" loop muted autoplay playsinline></video>
+        <div class="overlay"></div>
     </div>
 
-    <header class="header">
-        <section>
-            <a href="#">
-                <img src="./imgs/logo.png" alt="logo-cafeteria">
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/img/logo.png" alt="The Coffee House - Logo da cafeteria">
             </a>
 
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Sobre</a>
-                <a href="#" onclick="mostrarModal()">Endereço</a>
-            </nav>
+            <div class="utility-controls">
+                <div class="theme-toggle">
+                    <button id="theme-toggle-btn" aria-label="Alternar tema">
+                        <img src="./assets/svg/bedtime.svg" alt="Tema escuro" class="theme-icon dark-icon">
+                        <img src="./assets/svg/sunny.svg" alt="Tema claro" class="theme-icon light-icon">
+                    </button>
+                </div>
+                
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="pt-br">
+                        <img src="./assets/img/brasil.png" alt="Português" width="24" height="24">
+                    </button>
+                    <button class="lang-btn" data-lang="en">
+                        <img src="./assets/img/estados-unidos.png" alt="English" width="24" height="24">
+                    </button>
+                    <button class="lang-btn" data-lang="es">
+                        <img src="./assets/img/espanha.png" alt="Español" width="24" height="24">
+                    </button>
+                </div>
+            </div>
 
-        </section>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="#home" data-scroll>Home</a></li>
+                    <li><a href="#sobre" data-scroll>Sobre</a></li>
+                    <li><a href="#" class="btn-contact">Endereço</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="caixa-principal">
-        <div>
-            <h3>Code com o Melhor Café da Região</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi neque, non aliquid illo placeat vero magni
-                doloremque quae accusamus ipsa fugiat voluptatem, accusantium repudiandae nostrum officia quisquam
-                cumque harum voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga non unde magni
-                provident eos! Tempora suscipit laudantium, ut, ipsam facilis maxime assumenda vel, aliquid doloremque
-                soluta dolore accusantium quam neque?</p>
-            <a class="botao-link" href="">Pague o seu agora</a>
-        </div>
-    </section>
-
-    <section class="caixa-sobre">
-        <h2 class="titulo"> <span>Sobre</span> Nós</h2>
-        <div class="sobre-container">
-            <div class="sobre-imagem">
-                <img src="./imgs/about-img.jpg">
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container animate-on-scroll">
+                <h1>Code com o Melhor Café da Região</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi neque, non aliquid illo placeat vero magni
+                    doloremque quae accusamus ipsa fugiat voluptatem, accusantium repudiandae nostrum officia quisquam
+                    cumque harum voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga non unde magni
+                    provident eos! Tempora suscipit laudantium, ut, ipsam facilis maxime assumenda vel, aliquid doloremque
+                    soluta dolore accusantium quam neque?</p>
+                <a class="btn-primary btn-contact" href="#" aria-label="Comprar café agora">Peça o seu agora</a>
             </div>
-            <div class="sobre-texto">
-                <h3>O que faz nosso café especial?</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facere. Doloribus unde odit
-                    maxime, a tenetur dolore harum, debitis corporis reprehenderit earum ipsa possimus consequuntur,
-                    iure architecto id quasi similique.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, amet facere? Magni consequatur
-                    necessitatibus fuga aliquam? Ipsum possimus mollitia, in nam assumenda dicta porro dolorum
-                    consequatur ex, dolores id sint.</p>
-                <a class="botao-link" href="">Saiba Mais</a>
+        </section>
+
+        <section id="sobre" class="about-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll"><span>Sobre</span> Nós</h2>
+                <div class="about-container animate-on-scroll">
+                    <figure class="about-image">
+                        <img src="./assets/img/about-img.jpg" alt="Café sendo preparado por barista especializado">
+                    </figure>
+                    <article class="about-content">
+                        <h3>O que faz nosso café especial?</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facere. Doloribus unde odit
+                            maxime, a tenetur dolore harum, debitis corporis reprehenderit earum ipsa possimus consequuntur,
+                            iure architecto id quasi similique.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, amet facere? Magni consequatur
+                            necessitatibus fuga aliquam? Ipsum possimus mollitia, in nam assumenda dicta porro dolorum
+                            consequatur ex, dolores id sint.</p>
+                        <a class="btn-primary btn-contact" href="#" aria-label="Saiba mais sobre nosso café">Saiba Mais</a>
+                    </article>
+                </div>
             </div>
+        </section>
+    </main>
 
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 The Coffee House. Todos os direitos reservados.</p>
         </div>
-    </section>
+    </footer>
 
-    <div class="modal">
-        <h3 class="titulo"><span>Nosso</span>Endereço</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31680.695951312668!2d-0.32625646072366904!3d39.19887649644605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61b62fc4146bfb%3A0x4f13a5da85f49ee3!2s46410%20Sueca%2C%20Val%C3%AAncia%2C%20Espanha!5e1!3m2!1spt-BR!2sbr!4v1753377247700!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="modal" aria-hidden="true" role="dialog">
+        <button class="close-modal" aria-label="Fechar modal">&times;</button>
+        <h3 class="section-title"><span>Nosso</span> Endereço</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31680.695951312668!2d-0.32625646072366904!3d39.19887649644605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61b62fc4146bfb%3A0x4f13a5da85f49ee3!2s46410%20Sueca%2C%20Val%C3%AAncia%2C%20Espanha!5e1!3m2!1spt-BR!2sbr!4v1753377247700!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da The Coffee House"></iframe>
     </div>
 
-    <div class="mascara-1" onclick="esconderModal()"></div>
+    <div class="modal-overlay"></div>
 
-    <script src="./scripts.js"></script>
-
+    <script src="./assets/script/scripts.js"></script>
 </body>
 
 </html>
